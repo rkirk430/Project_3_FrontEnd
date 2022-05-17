@@ -1,12 +1,41 @@
 import React from "react";
-import data from "../data.json"
-console.log(data);
+import stockData from "../data.json"
+console.log(stockData);
 
-const Price = (props) => {
-    return(
-        <h1> This is the Price History Page </h1>
-     );
-};
+const Price = () => {
+    const allStockData = stockData.data.map((price,idx) => {
+        console.log(idx);
+        return (
+            <p key = {idx}> {price.ticker} {price.day_high} </p>
+        )
+    })
+        return(
+        <div className="pricing">
+            {allStockData}
+        </div>
+    )
+}
+
+
+
+
+
+
+// const Price = (props) => {
+//     return (
+//         <div className="pricing">
+//             {stockData.map(stockPrice) => {
+//                 return (
+//                     <div>
+//                         {data.ticker}
+//                     </div>
+//                 )
+//             })}
+//         </div>
+    
+    // const allStockData = stockData.map((stockData, idx) => {
+    //     console.log(idx);
+    // });
 
 export default Price;
 
