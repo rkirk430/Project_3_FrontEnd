@@ -6,6 +6,7 @@ import Home from './pages/home';
 import Price from './pages/price';
 import Sentiment from './pages/sentiment';
 import Valuation from './pages/valuation';
+import Header from './components/main';
 import Nav from './components/nav';
 
 
@@ -13,6 +14,7 @@ function App() {
 // Use Route Component to specify each route
   return (
     <div className="App">
+      <Header/>
       <Nav />
       <Routes>
         <Route path = "/" element = {<Home/>} />
