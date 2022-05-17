@@ -10,6 +10,7 @@ const Government = () => {
     })
         return(
             <div className="government">
+                <h1> This is the Gov't Insiders Trading Page </h1>
                 {allGovernmentData}
             </div>
         )
