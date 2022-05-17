@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter as Router } from "react-router-dom"
-import Home from './pages/home';
+
 
 
 
@@ -12,7 +12,6 @@ root.render(
   <React.StrictMode>
     <Router>
       <App />
-      <Home />
     </Router>
   </React.StrictMode>
 );
