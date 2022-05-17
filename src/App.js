@@ -13,9 +13,12 @@ function App() {
 // Use Route Component to specify each route
   return (
     <div className="App">
+      <Nav />
       <Routes>
         <Route path = "/" element = {<Home/>} />
         <Route path = "/price" element = {<Price/>} />
+        <Route path = "/sentiment" element = {<Sentiment />} />
+        <Route path = "/valuation" element = {<Valuation />} />
       </Routes>
 
     </div>

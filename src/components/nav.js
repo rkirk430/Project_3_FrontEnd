@@ -5,7 +5,16 @@ const Nav = (props) => {
     return (
         <div className="nav">
             <Link to = "/">
-                <div>Home</div>
+                <div>Home Page</div>
+            </Link>
+            <Link to = "/price">
+                <div>Pricing</div>
+            </Link>
+            <Link to = "/sentiment">
+                <div>Sentiment Tracker</div>
+            </Link>
+            <Link to = "/valuation">
+                <div>Valuations</div>
             </Link>
         </div>
     );
