@@ -3,7 +3,7 @@ import governmentData from "../government.json";
 console.log(governmentData); // Renders as Object with Arrays in console
 
 const Government = () => {
-    const allGovernmentData = governmentData[0].map((insiderTrades, idx) => {
+    const allGovernmentData = governmentData.map((insiderTrades, idx) => {
         return (
             <p key = {idx}> {insiderTrades.representative}</p>
         )
