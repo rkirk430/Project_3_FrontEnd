@@ -17,26 +17,6 @@ const Price = () => {
 }
 
 
-
-
-
-
-// const Price = (props) => {
-//     return (
-//         <div className="pricing">
-//             {stockData.map(stockPrice) => {
-//                 return (
-//                     <div>
-//                         {data.ticker}
-//                     </div>
-//                 )
-//             })}
-//         </div>
-    
-    // const allStockData = stockData.map((stockData, idx) => {
-    //     console.log(idx);
-    // });
-
 export default Price;
 
 
@@ -102,3 +82,7 @@ export default Price;
 // };
 
 // export default Price;
+
+
+
+//Source Data: https://www.stockdata.org/ 
