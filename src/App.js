@@ -5,9 +5,10 @@ import { Route, Routes } from "react-router-dom";
 import Home from './pages/home';
 import Price from './pages/price';
 import Sentiment from './pages/sentiment';
-import Valuation from './pages/valuation';
+import Government from './pages/government';
 import Header from './components/main';
 import Nav from './components/nav';
+
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         <Route path = "/" element = {<Home/>} />
         <Route path = "/price" element = {<Price/>} />
         <Route path = "/sentiment" element = {<Sentiment />} />
-        <Route path = "/valuation" element = {<Valuation />} />
+        <Route path = "/government" element = {<Government />} />
       </Routes>
 
     </div>

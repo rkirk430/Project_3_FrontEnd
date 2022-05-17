@@ -13,8 +13,8 @@ const Nav = (props) => {
             <Link to = "/sentiment">
                 <div>Sentiment Tracker</div>
             </Link>
-            <Link to = "/valuation">
-                <div>Valuations</div>
+            <Link to = "/government">
+                <div>U.S. Representatives Trading Activity</div>
             </Link>
         </div>
     );
