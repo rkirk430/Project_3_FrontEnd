@@ -6,7 +6,7 @@ const Price = () => {
     const allStockData = stockData.data.map((price,idx) => {
         console.log(idx);
         return (
-            <p key = {idx}> {price.ticker} {price.day_high} </p>
+            <p key = {idx}> {price.name} {price.ticker} ${price.price} </p>
         )
     })
         return(
