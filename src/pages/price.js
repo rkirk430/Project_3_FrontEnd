@@ -2,6 +2,7 @@ import React from "react";
 import stockData from "../data.json"
 console.log(stockData);
 
+
 const Price = () => {
     const allStockData = stockData.data.map((price,idx) => {
         console.log(idx);
