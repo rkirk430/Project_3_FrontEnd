@@ -11,15 +11,18 @@ import Nav from './components/nav';
 
 
 
+
 function App() {
 // Use Route Component to specify each route
   return (
     <div className="App">
       <Header/>
+
       <Nav />
       <Routes>
         <Route path = "/" element = {<Home/>} />
-        <Route path = "/price/:ticker" element = {<Price/>} />
+        <Route path = "/price" element = {<Price/>} />
+         {/* <Route path = "/price/:ticker" element = {<Price/>} /> */}
         <Route path = "/sentiment" element = {<Sentiment />} />
         <Route path = "/government" element = {<Government />} />
       </Routes>

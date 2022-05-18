@@ -1,6 +1,7 @@
 import React from "react";
 import governmentData from "../government.json";
-console.log(governmentData); // Renders as Object with Arrays in console
+// console.log(governmentData); // Renders as Object with Arrays in console
+
 
 const Government = () => {
     const allGovernmentData = governmentData.map((insiderTrades, idx) => {

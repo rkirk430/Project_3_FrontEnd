@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-// import stockData from "../data.json"
+import stockData from "../data.json"
 // console.log(stockData);
 
 // ====================================================================
@@ -23,31 +23,60 @@ const Price = () => {
     const [apiData, setApiData] = useState([]);
 
 
-
-
-
     const apiKey = process.env.REACT_APP_API_KEY;
     const url = `https://api.stockdata.org/v1/data/quote?symbols=AAPL&api_token=${apiKey}`;
     const params = useParams();
-    console.log(params);
+    // console.log(params);
 
 
 //Access Data from API
 //_____________________________________________________________________
 
-    const getDataFromApi = async () => {
+    const getStockPrice = async () => {
         const response = await fetch(url);
         const data = await response.json();
-        console.log(data);
-        setPrice(data);
+        // console.log(data);
+        setPrice(data);  //Use data when API working again
     }
+
+    // const getTickerSymbol = async () => {
+    //     const response = await fetch(url);
+    //     const data = await response.json();
+    //     // console.log(data);
+    //     setTickers(data);
+    // }
+
+    // const getApiData = async () => {
+    //     const response = await fetch(url);
+    //     const data = await response.json();
+    //     // console.log(data);
+    //     setApiData(data);
+    // }
+
+// =============================================================
+//              useEffect
+// =============================================================
+
     useEffect (() => {
-        getDataFromApi();
+        getStockPrice();
     }, []);
+
+    // useEffect (() => {
+    //     getTickerSymbol();
+    // }, []);
+
+    // useEffect (() => {
+    //     getApiData();
+    // }, []);
+
+    
+
+
 
         const loaded = () => {
         return (
             <div>
+                {/* <h1>{.price} {.ticker} </h1>  */}
                 <h1>Stock </h1> 
             </div>
         );
