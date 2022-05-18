@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 // import stockData from "../data.json"
 // console.log(stockData);
@@ -39,8 +39,25 @@ const Price = () => {
         const response = await fetch(url);
         const data = await response.json();
         console.log(data);
-        setApiData(data);
+        setPrice(data);
     }
+    useEffect (() => {
+        getDataFromApi();
+    }, []);
+
+        const loaded = () => {
+        return (
+            <div>
+                <h1>Stock </h1> 
+            </div>
+        );
+    }; 
+
+    const loading = () => {
+        return <h1> Loading... </h1>
+    };
+
+    return price ? loaded() : loading();
 
 
 }

@@ -19,7 +19,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path = "/" element = {<Home/>} />
-        <Route path = "/price" element = {<Price/>} />
+        <Route path = "/price/:ticker" element = {<Price/>} />
         <Route path = "/sentiment" element = {<Sentiment />} />
         <Route path = "/government" element = {<Government />} />
       </Routes>
