@@ -3,6 +3,23 @@ import stockData from "../data.json"
 console.log(stockData);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//========================================================================
+//                  Working Static Price 
+//========================================================================
 const Price = () => {
     const allStockData = stockData.data.map((price,idx) => {
         console.log(idx);
