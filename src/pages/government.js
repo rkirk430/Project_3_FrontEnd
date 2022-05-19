@@ -76,25 +76,25 @@ const Government = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>skoooo</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
+                            <td>5/14/2022</td>
+                            <td>Victoria Spartz</td>
+                            <td>SPG</td>
+                            <td>Purchase</td>
+                            <td>$15,000</td>
                         </tr>
                         <tr>
-                            <td>2</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            <td>@fat</td>
+                            <td>5/11/2022</td>
+                            <td>Bob Gibbs</td>
+                            <td>AAPL</td>
+                            <td>Purchase</td>
+                            <td>$1,000</td>
                         </tr>
                         <tr>
-                            <td>3</td>
-                            <td>Larry</td>
-                            <td>Thornton</td>
-                            <td>@twitter</td>
-                            <td>@twitter</td>
+                            <td>4/25/2022</td>
+                            <td>Virginia Foxx</td>
+                            <td>PSX</td>
+                            <td>Sale</td>
+                            <td>$50,000</td>
                         </tr>
                     </tbody>
                 </Table>
