@@ -1,5 +1,7 @@
 import {Navbar, Container, Nav, NavDropdown} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
+
 
 const Sandbox = (props) => {
     return (
@@ -14,9 +16,9 @@ const Sandbox = (props) => {
                         <Nav.Link href="/">Home</Nav.Link>
                         <Nav.Link href="/pricing">Pricing</Nav.Link>
                         <NavDropdown title="Alternative Datasets" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">Stock Pricing</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Reddit Sentiment</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Congress Trading Activity</NavDropdown.Item>
+                        <NavDropdown.Item href="/price">Stock Pricing</NavDropdown.Item>
+                        <NavDropdown.Item href="/sentiment">Reddit Sentiment</NavDropdown.Item>
+                        <NavDropdown.Item href="/government">Congress Trading Activity</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     </Navbar.Collapse>

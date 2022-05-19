@@ -16,8 +16,8 @@ function App() {
 // Use Route Component to specify each route
   return (
     <div className="App">
-      <Header/>
       <Sandbox />
+      <Header/>
       <Nav />
       <Routes>
         <Route path = "/" element = {<Home/>} />
