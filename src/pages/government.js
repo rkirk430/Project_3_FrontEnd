@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import Price from "./price";
 import governmentData from "../government.json";
+import {Table, TableProps} from "react-bootstrap";
 // console.log(governmentData); // Renders as Object with Arrays in console
 
 // ====================================================================
@@ -58,11 +59,45 @@ import governmentData from "../government.json";
 const Government = () => {
     const allGovernmentData = governmentData.map((insiderTrades, idx) => {
         return (
-            <p key = {idx}> {insiderTrades.Representative} {insiderTrades.Date} {insiderTrades.Ticker} {insiderTrades.Transaction} ${insiderTrades.Amount} </p>
+            <p key = {idx} representative = {insiderTrades.Representative} date = {insiderTrades.Date} ticker = {insiderTrades.Ticker} transaction = {insiderTrades.Transaction} amount = {insiderTrades.Amount}/> 
         )
     })
         return(
             <div className="government">
+                <Table striped bordered hover>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Representative</th>
+                            <th>Stock</th>
+                            <th>Purchase or Sale</th>
+                            <th>Amount Transacted ($)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>skoooo</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>Thornton</td>
+                            <td>@twitter</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </Table>
                 <h1> This is the Gov't Insiders Trading Page </h1>
                 {allGovernmentData}
             </div>
