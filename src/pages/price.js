@@ -19,8 +19,8 @@ const Price = () => {
     //State to hold Last Price
     // const [price, setPrice] = useState([]);
 
-    //State to hold API Data
-    // const [apiData, setApiData] = useState([]);
+    // State to hold API Data
+    const [apiData, setApiData] = useState([]);
 
 
     const apiKey = process.env.REACT_APP_API_KEY;
@@ -46,12 +46,12 @@ const Price = () => {
         setTickers(data);
     }
 
-    // const getApiData = async () => {
-    //     const response = await fetch(url);
-    //     const data = await response.json();
-    //     // console.log(data);
-    //     setApiData(data);
-    // }
+    const getApiData = async () => {
+        const response = await fetch(url);
+        const data = await response.json();
+        // console.log(data);
+        setApiData(data);
+    }
 
 // =============================================================
 //              useEffect
@@ -65,9 +65,9 @@ const Price = () => {
         getTickerSymbol();
     }, []);
 
-    // useEffect (() => {
-    //     getApiData();
-    // }, []);
+    useEffect (() => {
+        getApiData();
+    }, []);
 
     
 
@@ -76,7 +76,7 @@ const Price = () => {
         const loaded = () => {
         return (
             <div>
-                {/* <h1>{.price} {.ticker} </h1>  */}
+                {/* <h1>{data.ticker}</h1> */}
                 <h1>Stock </h1> 
             </div>
         );
@@ -152,7 +152,7 @@ export default Price;
 //         return (
 //             <p key = {idx}> {price.name} {price.ticker} ${price.price} </p>
 //         )
-//     })
+// //     })
 //         return(
 //         <div className="pricing">
 //             {allStockData}
