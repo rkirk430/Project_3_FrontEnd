@@ -8,7 +8,7 @@ const Home = (props) => {
             <Container fluid>
                 <Row className="homepage-header">
                     <Col sm={8}></Col>
-                        <h4> Alternative Market Research for the Disruptive Economy.... </h4>
+                        <h4> Alternative Market Research for the Disruptive Economy.2222... </h4>
                     <Col sm={4}></Col>
                          <h6> Quantstamp analyzes millions of datapoints to provide granular, actionable insights to underlying market sentiment </h6>
                 </Row>
