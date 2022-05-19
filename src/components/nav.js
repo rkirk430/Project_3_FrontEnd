@@ -8,7 +8,7 @@ const Nav = (props) => {
                 <div>Home Page</div>
             </Link>
             <Link to = "/price">
-                <div>Pricing</div>
+                <div>Last Price</div>
             </Link>
             <Link to = "/sentiment">
                 <div>Sentiment Tracker</div>
