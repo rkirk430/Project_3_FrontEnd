@@ -1,6 +1,6 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router";
+// import { useState, useEffect } from "react";
+// import { useParams } from "react-router";
 import stockData from "../data.json"
 // console.log(stockData);
 
@@ -8,36 +8,36 @@ import stockData from "../data.json"
 //                      Using API (Second Pass)
 // ====================================================================
 
-const Price = () => {
+// const Price = () => {
 
 //useState to HOLD DATA 
 //_____________________________________________________________________
 
     //State to hold Ticker Symbol
-    const [tickers, setTickers] = useState([]);
+    // const [tickers, setTickers] = useState([]);
 
     //State to hold Last Price
-    const [price, setPrice] = useState([]);
+    // const [price, setPrice] = useState([]);
 
     //State to hold API Data
-    const [apiData, setApiData] = useState([]);
+    // const [apiData, setApiData] = useState([]);
 
 
-    const apiKey = process.env.REACT_APP_API_KEY;
-    const url = `https://api.stockdata.org/v1/data/quote?symbols=AAPL&api_token=${apiKey}`;
-    const params = useParams();
+    // const apiKey = process.env.REACT_APP_API_KEY;
+    // const url = `https://api.stockdata.org/v1/data/quote?symbols=AAPL&api_token=${apiKey}`;
+    // const params = useParams();
     // console.log(params);
 
 
 //Access Data from API
 //_____________________________________________________________________
 
-    const getStockPrice = async () => {
-        const response = await fetch(url);
-        const data = await response.json();
+    // const getStockPrice = async () => {
+        // const response = await fetch(url);
+        // const data = await response.json();
         // console.log(data);
-        setPrice(data);  //Use data when API working again
-    }
+        // setPrice(data);  //Use data when API working again
+    // }
 
     // const getTickerSymbol = async () => {
     //     const response = await fetch(url);
@@ -57,9 +57,9 @@ const Price = () => {
 //              useEffect
 // =============================================================
 
-    useEffect (() => {
-        getStockPrice();
-    }, []);
+    // useEffect (() => {
+    //     getStockPrice();
+    // }, []);
 
     // useEffect (() => {
     //     getTickerSymbol();
@@ -73,25 +73,25 @@ const Price = () => {
 
 
 
-        const loaded = () => {
-        return (
-            <div>
-                {/* <h1>{.price} {.ticker} </h1>  */}
-                <h1>Stock </h1> 
-            </div>
-        );
-    }; 
+//         const loaded = () => {
+//         return (
+//             <div>
+//                 {/* <h1>{.price} {.ticker} </h1>  */}
+//                 <h1>Stock </h1> 
+//             </div>
+//         );
+//     }; 
 
-    const loading = () => {
-        return <h1> Loading... </h1>
-    };
+//     const loading = () => {
+//         return <h1> Loading... </h1>
+//     };
 
-    return price ? loaded() : loading();
+//     return price ? loaded() : loading();
 
 
-}
+// }
 
-export default Price;
+// export default Price;
 
 // ====================================================================
 //                      Using API (First Pass)
@@ -146,20 +146,20 @@ export default Price;
 //========================================================================
 //                  Working Static Price 
 //========================================================================
-// const Price = () => {
-//     const allStockData = stockData.data.map((price,idx) => {
-//         console.log(idx);
-//         return (
-//             <p key = {idx}> {price.name} {price.ticker} ${price.price} </p>
-//         )
-//     })
-//         return(
-//         <div className="pricing">
-//             {allStockData}
-//         </div>
-//     )
-// }
+const Price = () => {
+    const allStockData = stockData.data.map((price,idx) => {
+        console.log(idx);
+        return (
+            <p key = {idx}> {price.name} {price.ticker} ${price.price} </p>
+        )
+    })
+        return(
+        <div className="pricing">
+            {allStockData}
+        </div>
+    )
+}
 
 
-// export default Price;
+export default Price;
 //Source Data: https://www.stockdata.org/;

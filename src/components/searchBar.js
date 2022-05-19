@@ -58,3 +58,6 @@ const SearchBar = () => {
     )};
 
 export default SearchBar;
+
+
+//Sourcecode Example: https://javascript.plainenglish.io/how-to-implement-a-search-bar-in-react-js-8cf8f5513b8e
