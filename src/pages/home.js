@@ -17,13 +17,13 @@ const Home = (props) => {
                 <Row className="homepage-benefits-container">
                     <Col sm={4}></Col>
                         <h6> API Model Integration </h6>
-                        <smaller> What does it mean? </smaller>
+                        <h6> What does it mean? </h6>
                     <Col sm={4}></Col>
                         <h6> Real Time Trade Alerts </h6>
-                        <smaller> What does it mean? </smaller>
+                        <h6> What does it mean? </h6>
                     <Col sm={4}></Col>
                         <h6> Improving Risk-Adjusted Returns </h6>
-                        <smaller> What does it mean? </smaller>
+                        <h6> What does it mean? </h6>
                 </Row>
             </Container>
         </>

@@ -61,22 +61,22 @@ const Price = () => {
     //     getStockPrice();
     // }, []);
 
-    useEffect (() => {
-        getTickerSymbol();
-    }, []);
+useEffect (() => {
+    getTickerSymbol();
+}, []);
 
-    useEffect (() => {
-        getApiData();
-    }, []);
+useEffect (() => {
+    getApiData();
+}, []);
 
     
 
 
 
-        const loaded = () => {
+    const loaded = () => {
         return (
             <div>
-                {/* <h1>{data.ticker}</h1> */}
+                <h1>{tickers} {apiData}</h1>
                 <h1>Stock </h1> 
             </div>
         );
