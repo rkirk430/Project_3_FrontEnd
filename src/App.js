@@ -8,7 +8,7 @@ import Sentiment from './pages/sentiment';
 import Government from './pages/government';
 import Header from './components/main';
 import Nav from './components/nav';
-
+import Sandbox from './components/sandbox';
 
 
 
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-
+      <Sandbox />
       <Nav />
       <Routes>
         <Route path = "/" element = {<Home/>} />
