@@ -12,7 +12,7 @@ const Sentiment = () => {
     // State to hold Ticker Symbol
     const [tickers, setTickers] = useState([]);
 
-    const url = "http://apewisdom.io/api/v1.0/filter/all-stocks/page/1";
+    const url = "https://apewisdom.io/api/v1.0/filter/all-stocks/page/1";
     const params = useParams();
     // console.log(params);
 
@@ -23,8 +23,8 @@ const Sentiment = () => {
         console.log(data);
         setTickers(data);
     }
-// =============================================================
-            //  useEffect
+// =================================================================
+            //  useEffects
 // =============================================================
 
     useEffect (() => {
