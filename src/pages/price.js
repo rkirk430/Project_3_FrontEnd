@@ -2,10 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 function Price(props) {
+    // console.log(props);
     const [lastPrices, setLastPrices] = useState(null);
 
     const getLastPrices = async () => {
         const response = await fetch(props.URL+"lastprice");
+        console.log(response);
         const data = await response.json();
         console.log(data);
         setLastPrices(data);
@@ -14,9 +16,9 @@ function Price(props) {
     useEffect(() => {getLastPrices()}, []);
 
     const loaded = () => {
-        return lastPrices.data.name((lastPrice) => {
+        return lastPrices.map((lastPrice) => {
             <div>
-                <h2>{lastPrice.data.ticker}</h2>
+                <h2>{lastPrice.data}</h2>
                  <h2> sup </h2>
 
             </div>
