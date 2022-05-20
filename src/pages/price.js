@@ -11,10 +11,10 @@ function Price(props) {
         setLastPrices(data);
     };
 
-    useEffect(() => getLastPrices(), []);
+    useEffect(() => {getLastPrices()}, []);
 
     const loaded = () => {
-        return lastPrices.map((lastPrice) => {
+        return lastPrices.data.name((lastPrice) => {
             <div>
                 <h2>{lastPrice.data.ticker}</h2>
                  <h2> sup </h2>
