@@ -13,6 +13,7 @@ import Sandbox from './components/sandbox';
 
 
 function App() {
+const URL = "https://main--comforting-yeot-c4b1f1.netlify.app/";
 // Use Route Component to specify each route
   return (
     <div className="App">
@@ -23,8 +24,8 @@ function App() {
         <Route path = "/" element = {<Home/>} />
         <Route path = "/price" element = {<Price/>} />
          {/* <Route path = "/price/:ticker" element = {<Price/>} /> */}
-        <Route path = "/sentiment" element = {<Sentiment />} />
-        <Route path = "/government" element = {<Government />} />
+        <Route path = "/sentiment" element = {<Sentiment URL={URL} />} />
+        <Route path = "/government" element = {<Government URL={URL} />} />
       </Routes>
 
     </div>

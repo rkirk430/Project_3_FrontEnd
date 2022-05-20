@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import sentimentData from "../sentiment.json";
-import SearchBar from "../components/searchBar";
+
 // console.log(sentimentData); // Renders Object Array from "sentiment.json"
 
 const Sentiment = () => {
@@ -34,7 +34,6 @@ const Sentiment = () => {
     const loaded = () => {
         return (
             <div>
-                <SearchBar/>
                 <h1>Stock Sentiment </h1> 
             </div>
         );

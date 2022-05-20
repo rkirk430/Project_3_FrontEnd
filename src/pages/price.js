@@ -14,18 +14,18 @@ const Price = () => {
 //_____________________________________________________________________
 
     //State to hold Ticker Symbol
-    const [tickers, setTickers] = useState([]);
+    // const [tickers, setTickers] = useState([]);
 
     //State to hold Last Price
     // const [price, setPrice] = useState([]);
 
     // State to hold API Data
-    const [apiData, setApiData] = useState([]);
+    // const [apiData, setApiData] = useState([]);
 
 
-    const apiKey = process.env.REACT_APP_API_KEY;
-    const url = `https://api.stockdata.org/v1/data/quote?symbols=AAPL&api_token=${apiKey}`;
-    const params = useParams();
+    // const apiKey = process.env.REACT_APP_API_KEY;
+    // const url = `https://api.stockdata.org/v1/data/quote?symbols=AAPL&api_token=${apiKey}`;
+    // const params = useParams();
     // console.log(params);
 
 
@@ -39,19 +39,19 @@ const Price = () => {
         // setPrice(data);  //Use data when API working again
     // }
 
-    const getTickerSymbol = async () => {
-        const response = await fetch(url);
-        const data = await response.json();
+    // const getTickerSymbol = async () => {
+    //     const response = await fetch(url);
+    //     const data = await response.json();
         // console.log(data);
-        setTickers(data);
-    }
+    //     setTickers(data);
+    // }
 
-    const getApiData = async () => {
-        const response = await fetch(url);
-        const data = await response.json();
+    // const getApiData = async () => {
+    //     const response = await fetch(url);
+    //     const data = await response.json();
         // console.log(data);
-        setApiData(data);
-    }
+    //     setApiData(data);
+    // }
 
 // =============================================================
 //              useEffect
@@ -61,37 +61,35 @@ const Price = () => {
     //     getStockPrice();
     // }, []);
 
-useEffect (() => {
-    getTickerSymbol();
-}, []);
+// useEffect (() => {
+//     getTickerSymbol();
+// }, []);
 
-useEffect (() => {
-    getApiData();
-}, []);
+// useEffect (() => {
+//     getApiData();
+// }, []);
 
     
 
 
 
-    const loaded = () => {
-        return (
-            <div>
-                <h1>{tickers} {apiData}</h1>
-                <h1>Stock </h1> 
-            </div>
-        );
-    }; 
+// const loaded = () => {
+//     return (
+//         <div>
+//             <h1>Lets see {tickers} {apiData}plese work</h1>
+//             <h1>Stock </h1> 
+//         </div>
+//      );
+//  }; 
 
-    const loading = () => {
-        return <h1> Loading... </h1>
-    };
+// const loading = () => {
+//     return <h1> Loading... </h1>
+//  };
 
-    return tickers ? loaded() : loading();
+// return tickers ? loaded() : loading();
+// }
 
-
-}
-
-export default Price;
+// export default Price;
 
 // ====================================================================
 //                      Using API (First Pass)
