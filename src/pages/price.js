@@ -1,14 +1,64 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router";
-import stockData from "../data.json"
-// console.log(stockData);
+
+function Price(props) {
+    const [lastPrices, setLastPrices] = useState(null);
+
+    const getLastPrices = async () => {
+        const response = await fetch(props.URL+"lastprice");
+        const data = await response.json();
+        console.log(data);
+        setLastPrices(data);
+    };
+
+    useEffect(() => getLastPrices(), []);
+
+    const loaded = () => {
+        return lastPrices.map((lastPrice) => {
+            <div>
+                <h2>{lastPrice.data.ticker}</h2>
+                 <h2> sup </h2>
+
+            </div>
+        })
+    }
+
+    return lastPrices ? loaded() : <h1> Loading...</h1>
+
+
+
+}
+
+export default Price;
+
+//========================================================================
+//                  Working Static Price 
+//========================================================================
+// const Price = () => {
+//     const allStockData = stockData.data.map((price,idx) => {
+//         console.log(idx);
+//         return (
+//             <p key = {idx}> {price.name} {price.ticker} ${price.price} </p>
+//         )
+// //     })
+//         return(
+//         <div className="pricing">
+//             {allStockData}
+//         </div>
+//     )
+// }
+
+
+// export default Price;
+
+
+
 
 // ====================================================================
 //                      Using API (Second Pass)
 // ====================================================================
 
-const Price = () => {
+// const Price = () => {
 
 //useState to HOLD DATA 
 //_____________________________________________________________________
@@ -160,4 +210,3 @@ const Price = () => {
 
 
 // export default Price;
-//Source Data: https://www.stockdata.org/;

@@ -13,7 +13,7 @@ import Sandbox from './components/sandbox';
 
 
 function App() {
-const URL = "https://main--comforting-yeot-c4b1f1.netlify.app/";
+const URL = "https://project-3-rk.herokuapp.com/";
 // Use Route Component to specify each route
   return (
     <div className="App">
@@ -22,7 +22,7 @@ const URL = "https://main--comforting-yeot-c4b1f1.netlify.app/";
       <Nav />
       <Routes>
         <Route path = "/" element = {<Home/>} />
-        <Route path = "/price" element = {<Price/>} />
+        <Route path = "/lastprice" element = {<Price URL={URL}/>} />
          {/* <Route path = "/price/:ticker" element = {<Price/>} /> */}
         <Route path = "/sentiment" element = {<Sentiment URL={URL} />} />
         <Route path = "/government" element = {<Government URL={URL} />} />
