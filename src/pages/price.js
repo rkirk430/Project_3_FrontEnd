@@ -9,16 +9,16 @@ function Price(props) {
         const response = await fetch(props.URL+"lastprice");
         console.log(response);
         const data = await response.json();
-        console.log(data);
-        setLastPrices(data);
+        console.log(data.data);
+        setLastPrices(data.data);
     };
 
     useEffect(() => {getLastPrices()}, []);
 
     const loaded = () => {
-        return lastPrices.map((lastPrice) => {
+        return lastPrices?.map((lastPrice) => {
             <div>
-                <h2>{lastPrice.data}</h2>
+                <h2>{lastPrice.name}</h2>
                  <h2> sup </h2>
 
             </div>
